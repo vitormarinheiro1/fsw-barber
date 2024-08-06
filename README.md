@@ -129,3 +129,8 @@ Conventional Commits: https://www.conventionalcommits.org/pt-br/v1.0.0-beta.4/
 Prisma ORM: https://www.prisma.io/
 
 Figma do Projeto: https://www.figma.com/design/ByDjVh7THsTnsSVRKNN8yy/FSW-5.0-%5BLive%5D?node-id=0-1&t=hrkbES9BIPs5YtLE-0
+
+Desafios
+
+- Avaliações
+- Responsividade
