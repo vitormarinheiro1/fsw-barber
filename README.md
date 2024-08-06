@@ -111,9 +111,21 @@ Instalação e Configuração do Husky e Lint-Staged
 
 Agora o Husky e o Lint-Staged estão configurados para garantir a qualidade do código e a conformidade com as mensagens de commit convencionais.
 
+- Tecnologias utilizadas
 
+- **Next.js**
+- **React.js**
+- **PostgreSQL**
+- **Tailwind CSS**
+- **Prisma**
+- **Node.js**
+- **ShadCN**
+- **TypeScript**
+- **JavaScript**
 
 Links / Documentação:
 Neon DB: https://neon.tech/
 Conventional Commits: https://www.conventionalcommits.org/pt-br/v1.0.0-beta.4/
 Prisma ORM: https://www.prisma.io/
+
+Figma do Projeto: https://www.figma.com/design/ByDjVh7THsTnsSVRKNN8yy/FSW-5.0-%5BLive%5D?node-id=0-1&t=hrkbES9BIPs5YtLE-0
