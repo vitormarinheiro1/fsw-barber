@@ -12,7 +12,7 @@
 <h2 id="layout">🎨 Layout</h2>
 
 <p align="center">
-    <img src="../public/projeto1.png" alt="Image 1" width="400px">
+    <img src="../../public/projeto1.png" alt="Image 1" width="400px">
     <img src="../public/projeto2.png" alt="Image 2" width="400px">
 </p>
 
