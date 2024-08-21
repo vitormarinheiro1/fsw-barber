@@ -1,137 +1,64 @@
-# Aula 0: Setup do Projeto
+<h1 align="center" style="font-weight: bold;">FSW Barber</h1>
 
-Instalação e Configuração Inicial
+<p align="center">
+ <a href="#tech">Technologies</a> • 
+ <a href="#started">Getting Started</a> • 
+</p>
 
-- Instalar a extensão Simple React Snippets: Certifique-se de que a extensão Simple React Snippets está instalada no seu editor de código.
+<p align="center">
+     <a href="https://fsw-barber-vitor.vercel.app/">📱 Visit this Project</a>
+</p>
 
-- Criar um Novo Projeto Next.js: Execute o seguinte comando para criar um novo projeto Next.js com suporte a TypeScript, ESLint, Tailwind e o App Router:
-  npx create-next-app@latest fsw-barber --typescript --eslint --tailwind --app
+<h2 id="layout">🎨 Layout</h2>
 
-- Instalar PostgreSQL: Siga as instruções para instalar o PostgreSQL no seu sistema.
+<p align="center">
+    <img src="./src/assets/projeto1.png" alt="Image 1" width="400px">
+    <img src="./src/assets/projeto2.png" alt="Image 2" width="400px">
+</p>
 
-- Configurar Prisma:
-  1. Instale o Prisma como uma dependência de desenvolvimento:
-     npm install prisma --save-dev
-  2. Inicialize o Prisma com o PostgreSQL como provedor de dados:
-     npx prisma init --datasource-provider postgresql
-  3. Crie um novo banco de dados no NeonDB e copie a URL do PostgreSQL para o arquivo .env do projeto.
+<h2 id="tech">💻 Technologies</h2>
 
-- Definir Tabelas no Prisma: Configure as tabelas necessárias no arquivo schema.prisma.
+- Next.js
+- React.js
+- PostgreSQL
+- Tailwind CSS
+- Prisma
+- Node.js
+- Shadcn
+- TypeScript
+- JavaScript
+- Zod
+- React Hook Form
+- Husky
+- Prettier
 
-- Formatar o Código Prisma: Execute o comando abaixo para formatar o código Prisma:
-  npx prisma format
+<h2 id="started">🚀 Getting started</h2>
 
-- Criar e Aplicar Migrações: Crie uma migração inicial em modo de desenvolvimento:
-  npx prisma migrate dev --name init_db
+<h3>Prerequisites</h3>
 
-- Inserir Dados de Seed:
-  1. Crie um arquivo seed.ts para inserção de dados.
-  2. Adicione o seguinte script ao package.json para rodar o script de seed:
-     "prisma": {
-       "seed": "ts-node prisma/seed.ts"
-     }
-  3. Instale o ts-node como uma dependência de desenvolvimento:
-     npm install -D ts-node
-  4. Execute o script de seed para inserir os dados no banco:
-     npx prisma db seed
+- [NodeJS](https://nodejs.org/en)
+- [Git](https://git-scm.com/)
 
-Configuração de Estilo
+<h3>Cloning</h3>
 
-- Instalar Prettier e Configurar Tailwind:
-  1. Instale o Prettier e o plugin para Tailwind CSS:
-     npm install -D prettier prettier-plugin-tailwindcss
-  2. Crie o arquivo .prettierrc.json e adicione a configuração abaixo:
-     {
-       "plugins": ["prettier-plugin-tailwindcss"],
-       "tabWidth": 2,
-       "semi": false
-     }
+How to clone your project
 
-- Instalar e Configurar Shadcn:
-  1. Execute o comando para instalar o Shadcn UI:
-     npx shadcn-ui@latest init
-  2. Selecione as opções:
-     - Style: Default
-     - Base Color: Slate
-     - CSS Variables: YES
-  3. Mova as pastas lib e components para dentro da pasta app e renomeie para _lib e _components para organização.
-  4. Atualize os aliases no arquivo components.json para:
-     "@/app/_lib/utils"
-     "@/app/_components"
-  5. Para instalar o botão, use:
-     npx shadcn-ui@latest add button
+```bash
+git clone https://github.com/vitormarinheiro1/fsw-barber.git
+```
 
-- Configurar o Estilo Global: Adicione a estilização do Tailwind CSS ao arquivo globals.css disponível em: https://github.com/felipemotarocha/fullstackweek-barber-v2/blob/main/app/globals.css
+<h3>Starting</h3>
 
-- Configurar Modo Escuro: Abra o arquivo app/layout.tsx e adicione a classe dark à tag <html> para ativar o modo escuro:
-  <html className="dark">
+How to start your project
 
+```bash
+cd fsw-barber
+npm install
+npm run dev
+```
 
-Instalação e Configuração do Husky e Lint-Staged
+<h3>Documentations that might help</h3>
 
-1. **Instalar Husky e Lint-Staged**:
-   - Execute o seguinte comando para instalar o Husky e o Lint-Staged como dependências de desenvolvimento:
-     npm install -D husky lint-staged
+[📝 How to create a Pull Request](https://www.atlassian.com/br/git/tutorials/making-a-pull-request)
 
-2. **Inicializar Husky**:
-   - Inicialize o Husky com o comando:
-     npx husky init
-
-3. **Configurar Lint-Staged**:
-   - Execute o comando para configurar o Lint-Staged:
-     npx lint-staged
-
-4. **Criar Configuração do Lint-Staged**:
-   - Crie o arquivo `.lintstagedrc.json` com o seguinte conteúdo:
-     ```json
-     {
-       "*.ts?(x)": ["eslint --fix", "prettier --write"]
-     }
-     ```
-
-5. **Atualizar Configuração do ESLint**:
-   - No arquivo `.eslintrc.json`, adicione a seguinte regra:
-     ```json
-     "rules": {
-       "no-unused-vars": "error"
-     }
-     ```
-
-6. **Configuração de Commit Convencional**:
-   - Instale o `git-commit-msg-linter` como uma dependência de desenvolvimento:
-     npm install -D git-commit-msg-linter
-
-7. **Criar Script de Commit**:
-   - Crie o arquivo `commit-msg` dentro da pasta `.husky` e adicione o seguinte código:
-     ```sh
-     #!/bin/sh
-     .git/hooks/commit-msg $1
-     ```
-   - Certifique-se de que o arquivo `commit-msg` tem permissões de execução.
-
-Agora o Husky e o Lint-Staged estão configurados para garantir a qualidade do código e a conformidade com as mensagens de commit convencionais.
-
-- Tecnologias utilizadas
-
-- **Next.js**
-- **React.js**
-- **PostgreSQL**
-- **Tailwind CSS**
-- **Prisma**
-- **Node.js**
-- **ShadCN**
-- **TypeScript**
-- **JavaScript**
-
-Links / Documentação:
-Neon DB: https://neon.tech/
-Conventional Commits: https://www.conventionalcommits.org/pt-br/v1.0.0-beta.4/
-Prisma ORM: https://www.prisma.io/
-ShadCn: https://ui.shadcn.com/docs
-
-Figma do Projeto: https://www.figma.com/design/ByDjVh7THsTnsSVRKNN8yy/FSW-5.0-%5BLive%5D?node-id=0-1&t=hrkbES9BIPs5YtLE-0
-
-Desafios
-
-- Avaliações
-- Responsividade
+[💾 Commit pattern](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
